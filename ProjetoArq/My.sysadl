@@ -222,13 +222,13 @@ package SysADL_components {
     ports : financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; autorizacaoVenda : autorizaVendaIPT ; saldoValidado : gestaoSaldoOPT ; }
 
     component def ControladorVendaCP {
-    }
+    ports : pedidoVenda : requisicaoVendaOPT ; autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; }
 
     component def ControladorVolumeCP {
-    }
+    ports : volumeSolicitado : fluxoVolumeOPT ; autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; }
 
     component def GerenciadorPedidosCP {
-    }
+    ports : pedido : registroPedidoOPT ; }
 
     component def ControladorColetaCP {
     }
