@@ -213,7 +213,7 @@ package SysADL_components {
     }
 
     component def ControladorAcessoCP {
-    ports : entradaRFID : saidaRFIDOPT ; validacao : validaAcessoIPT ; comando : comandoAcessoIPT ; autorizacao : autorizaAcessoOPT ; }
+    ports : entradaRFID : saidaRFIDOPT ; validacao : validaAcessoIPT ; autorizacao : autorizaAcessoOPT ; }
 
     component def GerenciadorCreditoCP {
     ports : credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; financeiro : processaFinanceiroIPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; }
@@ -234,16 +234,16 @@ package SysADL_components {
     ports : validacaoColeta : validacaoColetaOPT ; autorizacao : liberaEntregaIPT ; status : statusOperacaoIPT ; }
 
     component def RepositorioTransacoesCP {
-    }
+    ports : financeiro : processaFinanceiroIPT ; pedido : registroPedidoOPT ; venda : requisicaoVendaOPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; }
 
     boundary component def LeitorIdentificacaoCP {
-    }
+    ports : leituraRFID : saidaRFIDOPT ; }
 
     boundary component def CatracaCP {
-    }
+    ports : comando : comandoAcessoIPT ; }
 
     boundary component def TotemAutoAtendimentoCP {
-    }
+    ports : status : statusOperacaoIPT ; credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; }
 
     boundary component def MaquinaItensCP {
     }
