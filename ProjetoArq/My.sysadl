@@ -246,14 +246,14 @@ package SysADL_components {
     ports : status : statusOperacaoIPT ; credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; }
 
     boundary component def MaquinaItensCP {
-    }
+    ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; solicitacaoVenda : requisicaoVendaOPT ; }
 
     boundary component def TorneiraAutomaticaCP {
-    }
+    ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; solicitacaoVolume : fluxoVolumeOPT ; }
 
     boundary component def QuiosquePedidoCP {
-    }
+    ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; pedido : registroPedidoOPT ; }
 
     boundary component def PontoColetaCP {
-    }
+    ports : liberacao : liberaEntregaIPT ; status : statusOperacaoIPT ; solicitacaoColeta : validacaoColetaOPT ; }
 }
