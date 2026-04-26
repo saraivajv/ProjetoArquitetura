@@ -46,55 +46,55 @@ package SysADL.types {
     }
 }
 
-Requirement ControleAcessoFR (RF01) {
+Requirement ControleAcessoFR (FR01) {
     text = "O sistema deve validar a entrada e saída de usuários em catracas eletrônicas via cartão RFID ou QR-Code."
     derive DesempenhoNFR;
 
-    Requirement GestaoCreditosFR (RF02) {
+    Requirement GestaoCreditosFR (FR02) {
         text = "O sistema deve permitir a compra e recarga de créditos no cartão de identificação em máquinas de autoatendimento."
         derive VendaAutomaticaItensFR, LiquidacaoFinalFR, SegurancaNFR;
     }
 }
 
-Requirement VendaAutomaticaItensFR (RF03) {
+Requirement VendaAutomaticaItensFR (FR03) {
     text = "O sistema deve controlar a liberação de bebidas (latas/garrafas) e lanches prontos em máquinas automáticas após validação do saldo."
     derive EscalabilidadeNFR;
 
-    Requirement DispensacaoVolumeFR (RF04) {
+    Requirement DispensacaoVolumeFR (FR04) {
         text = "O sistema deve controlar torneiras automáticas, permitindo a venda de bebidas por quantidade volumétrica exata."
     }
 
-    Requirement PedidosSobDemandaFR (RF05) {
+    Requirement PedidosSobDemandaFR (FR05) {
         text = "O sistema deve registrar pedidos de lanches personalizados feitos em máquinas e gerenciar sua produção."
         derive ValidacaoColetaFR;
     }
 }
 
-Requirement ValidacaoColetaFR (RF06) {
+Requirement ValidacaoColetaFR (FR06) {
     text = "O sistema deve liberar a entrega de lanches nos pontos de coleta apenas mediante a apresentação do cartão RFID/QR-Code."
 }
 
-Requirement LiquidacaoFinalFR (RF07) {
+Requirement LiquidacaoFinalFR (FR07) {
     text = "O sistema deve permitir o fechamento da conta e quitação de despesas remanescentes ao final do uso."
 }
 
-Requirement EscalabilidadeNFR (RNF01) {
+Requirement EscalabilidadeNFR (NFR01) {
     text = "O sistema deve suportar um grande fluxo de pessoas e múltiplas máquinas operando simultaneamente em arenas ou estádios."
 }
 
-Requirement ConfiabilidadeNFR (RNF02) {
+Requirement ConfiabilidadeNFR (NFR02) {
     text = "O sistema deve garantir a operação contínua e a integridade do saldo do cliente, mesmo em cenários de alta concorrência."
 }
 
-Requirement SegurancaNFR (RNF03) {
+Requirement SegurancaNFR (NFR03) {
     text = "As transações financeiras e o acesso físico devem ser protegidos contra fraudes e acessos não autorizados."
 }
 
-Requirement ModificabilidadeNFR (RNF04) {
+Requirement ModificabilidadeNFR (NFR04) {
     text = "A arquitetura deve permitir a instalação do sistema em diferentes configurações (restaurantes, bares ou estádios) com facilidade."
 }
 
-Requirement DesempenhoNFR (RNF05) {
+Requirement DesempenhoNFR (NFR05) {
     text = "O tempo de resposta para validação em catracas e liberação de produtos deve ser mínimo para evitar filas."
 }
 
@@ -213,13 +213,13 @@ package SysADL_components {
     }
 
     component def ControladorAcessoCP {
-    }
+    ports : entradaRFID : saidaRFIDOPT ; validacao : validaAcessoIPT ; comando : comandoAcessoIPT ; autorizacao : autorizaAcessoOPT ; }
 
     component def GerenciadorCreditoCP {
-    }
+    ports : credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; financeiro : processaFinanceiroIPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; }
 
     component def ValidadorTransacaoCP {
-    }
+    ports : financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; autorizacaoVenda : autorizaVendaIPT ; saldoValidado : gestaoSaldoOPT ; }
 
     component def ControladorVendaCP {
     }
