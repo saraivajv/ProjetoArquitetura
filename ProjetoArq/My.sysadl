@@ -222,6 +222,24 @@ package SysADL_connectors {
             ~ autoriza : autorizaVendaIPT;
             ~ liberacao : liberaEntregaIPT;
     }
+    
+    connector def pedidoCN {
+	    participants:
+	        ~ origem : registroPedidoOPT;
+	        ~ destino : registroPedidoIPT;
+	}
+
+	connector def liquidacaoCN {
+	    participants:
+	        ~ origem : solicitaLiquidacaoOPT;
+	        ~ destino : solicitaLiquidacaoIPT;
+	}
+	
+	connector def financeiroCN {
+	    participants:
+	        ~ origem : processaFinanceiroOPT;
+	        ~ destino : processaFinanceiroIPT;
+	}
 }
 
 package SysADL_components {
