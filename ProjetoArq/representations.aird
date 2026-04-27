@@ -31,7 +31,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']"/>
         <target xmi:type="sysadl:Package" href="My.sysadl#//@packages[name='SysADL_components']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0pWrsEG7EfG7xMVZH40EPA" name="Internal Block Diagram (Structural IBD)" repPath="#_0pU2gEG7EfG7xMVZH40EPA" changeId="1777251920630">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0pWrsEG7EfG7xMVZH40EPA" name="Internal Block Diagram (Structural IBD)" repPath="#_0pU2gEG7EfG7xMVZH40EPA" changeId="1777252038710">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']"/>
         <target xmi:type="sysadl:Configuration" href="My.sysadl#//@packages[name='SysADL_components']/@definitions[name='VendaBebidasComidasSystemCP']/@composite"/>
       </ownedRepresentationDescriptors>
@@ -4054,7 +4054,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HbT5ZEG9EfG7xMVZH40EPA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_HbTSUUG9EfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HbTSUkG9EfG7xMVZH40EPA" x="1235" y="318" width="152" height="72"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HbTSUkG9EfG7xMVZH40EPA" x="590" y="318" width="152" height="72"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_S5nIskG9EfG7xMVZH40EPA" type="3007" element="_S5i3UEG9EfG7xMVZH40EPA">
               <children xmi:type="notation:Node" xmi:id="_S5nItUG9EfG7xMVZH40EPA" type="5003">
@@ -4175,7 +4175,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y4CPCEG9EfG7xMVZH40EPA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Y4Bn7UG9EfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y4Bn7kG9EfG7xMVZH40EPA" x="1431" y="906" width="152" height="72"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y4Bn7kG9EfG7xMVZH40EPA" x="1003" y="618" width="152" height="72"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_eZynUEG9EfG7xMVZH40EPA" type="3007" element="_eZvkFkG9EfG7xMVZH40EPA">
               <children xmi:type="notation:Node" xmi:id="_eZynU0G9EfG7xMVZH40EPA" type="5003">
@@ -4329,7 +4329,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xPds3EG9EfG7xMVZH40EPA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_xPdFwUG9EfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xPdFwkG9EfG7xMVZH40EPA" x="1236" y="446" width="152" height="72"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xPdFwkG9EfG7xMVZH40EPA" x="591" y="446" width="152" height="72"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_2h7sAEG9EfG7xMVZH40EPA" type="3007" element="_2h4oxEG9EfG7xMVZH40EPA">
               <children xmi:type="notation:Node" xmi:id="_2h7sA0G9EfG7xMVZH40EPA" type="5003">
@@ -4395,7 +4395,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2h8TIUG9EfG7xMVZH40EPA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_2h7sAUG9EfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2h7sAkG9EfG7xMVZH40EPA" x="1443" y="762" width="152" height="72"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2h7sAkG9EfG7xMVZH40EPA" x="1000" y="518" width="152" height="72"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_EVO8cEHBEfG7xMVZH40EPA" type="3007" element="_EVKD8kHBEfG7xMVZH40EPA">
               <children xmi:type="notation:Node" xmi:id="_EVO8c0HBEfG7xMVZH40EPA" type="5003">
@@ -4494,7 +4494,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MKimpEHTEfG7xMVZH40EPA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_MKh_kUHTEfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MKh_kkHTEfG7xMVZH40EPA" x="659" y="318" width="152" height="72"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MKh_kkHTEfG7xMVZH40EPA" x="1000" y="414" width="152" height="72"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Q8UTkEHTEfG7xMVZH40EPA" type="3007" element="_Q8O0HkHTEfG7xMVZH40EPA">
               <children xmi:type="notation:Node" xmi:id="_Q8UTk0HTEfG7xMVZH40EPA" type="5003">
@@ -4549,13 +4549,13 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q8VhskHTEfG7xMVZH40EPA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Q8UTkUHTEfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q8UTkkHTEfG7xMVZH40EPA" x="659" y="446" width="152" height="72"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q8UTkkHTEfG7xMVZH40EPA" x="995" y="314" width="152" height="72"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_0piR4UG7EfG7xMVZH40EPA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_0piR4kG7EfG7xMVZH40EPA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_0phq0UG7EfG7xMVZH40EPA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0phq0kG7EfG7xMVZH40EPA" x="-560" y="-28" width="1663" height="1339"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0phq0kG7EfG7xMVZH40EPA" x="-256" y="-112" width="1663" height="1339"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_0pcLQUG7EfG7xMVZH40EPA"/>
         <edges xmi:type="notation:Edge" xmi:id="_dO2vIEHGEfG7xMVZH40EPA" type="4001" element="_dOuzUEHGEfG7xMVZH40EPA" source="_EVPjg0HBEfG7xMVZH40EPA" target="_ZkkOtUHGEfG7xMVZH40EPA">
@@ -4640,7 +4640,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FldeIEHVEfG7xMVZH40EPA" type="4001" element="_FlTGIkHVEfG7xMVZH40EPA" source="_HbTSX0G9EfG7xMVZH40EPA" target="_xPdFxUG9EfG7xMVZH40EPA">
           <children xmi:type="notation:Node" xmi:id="_FldeJEHVEfG7xMVZH40EPA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FldeJUHVEfG7xMVZH40EPA" x="-1" y="-58"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FldeJUHVEfG7xMVZH40EPA" x="-1" y="-49"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FldeJkHVEfG7xMVZH40EPA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FldeJ0HVEfG7xMVZH40EPA" y="10"/>
