@@ -161,6 +161,26 @@ package SysADL_ports {
     port def gestaoSaldoOPT {
         flow out Boolean
     }
+    
+    port def registroPedidoIPT {
+    	flow in ID_RFID
+	}
+
+	port def solicitaLiquidacaoIPT {
+	    flow in ID_RFID
+	}
+	
+	port def processaFinanceiroOPT {
+	    flow out Saldo
+	}
+	
+	port def autorizaVendaOPT {
+	    flow out Boolean
+	}
+	
+	port def statusOperacaoOPT {
+	    flow out Boolean
+	}
 }
 
 package SysADL_connectors {
