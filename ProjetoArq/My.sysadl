@@ -78,23 +78,23 @@ Requirement LiquidacaoFinalFR (RF07) {
     text = "O sistema deve permitir o fechamento da conta e quitação de despesas remanescentes ao final do uso."
 }
 
-Requirement EscalabilidadeNFR (NFR01) {
+Requirement EscalabilidadeNFR (RNF01) {
     text = "O sistema deve suportar um grande fluxo de pessoas e múltiplas máquinas operando simultaneamente em arenas ou estádios."
 }
 
-Requirement ConfiabilidadeNFR (NFR02) {
+Requirement ConfiabilidadeNFR (RNF02) {
     text = "O sistema deve garantir a operação contínua e a integridade do saldo do cliente, mesmo em cenários de alta concorrência."
 }
 
-Requirement SegurancaNFR (NFR03) {
+Requirement SegurancaNFR (RNF03) {
     text = "As transações financeiras e o acesso físico devem ser protegidos contra fraudes e acessos não autorizados."
 }
 
-Requirement ModificabilidadeNFR (NFR04) {
+Requirement ModificabilidadeNFR (RNF04) {
     text = "A arquitetura deve permitir a instalação do sistema em diferentes configurações (restaurantes, bares ou estádios) com facilidade."
 }
 
-Requirement DesempenhoNFR (NFR05) {
+Requirement DesempenhoNFR (RNF05) {
     text = "O tempo de resposta para validação em catracas e liberação de produtos deve ser mínimo para evitar filas."
 }
 
@@ -248,25 +248,25 @@ package SysADL_components {
     import SysADL_ports;
 
     component def VendaBebidasComidasSystemCP {
-    configuration { components : leitor : LeitorIdentificacaoCP { using ports : leituraRFID : saidaRFIDOPT ; } catraca : CatracaCP { using ports : comando : comandoAcessoIPT ; } totem : TotemAutoAtendimentoCP { using ports : status : statusOperacaoIPT ; credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; } maquina : MaquinaItensCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; solicitacaoVenda : requisicaoVendaOPT ; } torneira : TorneiraAutomaticaCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; solicitacaoVolume : fluxoVolumeOPT ; }  coleta : PontoColetaCP { using ports : liberacao : liberaEntregaIPT ; status : statusOperacaoIPT ; solicitacaoColeta : validacaoColetaOPT ; }  credito : GerenciadorCreditoCP { using ports : credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; financeiro : processaFinanceiroIPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; } transacao : ValidadorTransacaoCP { using ports : financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; autorizacaoVenda : autorizaVendaIPT ; saldoValidado : gestaoSaldoOPT ; } venda : ControladorVendaCP { using ports : pedidoVenda : requisicaoVendaOPT ; autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; } volume : ControladorVolumeCP { using ports : volumeSolicitado : fluxoVolumeOPT ; autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; }  ctrlColeta : ControladorColetaCP { using ports : validacaoColeta : validacaoColetaOPT ; autorizacao : liberaEntregaIPT ; status : statusOperacaoIPT ; } repo : RepositorioTransacoesCP { using ports : financeiro : processaFinanceiroIPT ; pedido : registroPedidoOPT ; venda : requisicaoVendaOPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; }  ControladorAcessoCP : ControladorAcessoCP { using ports : validacao : validaAcessoIPT ; autorizacaoAcesso : autorizaAcessoOPT ; } quiosque : QuiosquePedidoCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; pedido : registroPedidoOPT ; } pedidos : GerenciadorPedidosCP { using ports : autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; pedidoRecebido : registroPedidoOPT ; } connectors :  c1 : identificacaoCN bindings leituraRFID = validacao ; c2 : controleAcessoCN bindings autorizacaoAcesso = comando ; c3 : creditoCN bindings credito = financeiro ; c4 : identificacaoCN bindings solicitacaoVenda = pedidoVenda ; c5 : volumeCN bindings solicitacaoVolume = volumeSolicitado ; c6 : identificacaoCN bindings solicitacaoColeta = validacaoColeta ; } }
+    configuration { components : leitor : LeitorIdentificacaoCP { using ports : leituraRFID : saidaRFIDOPT ; } catraca : CatracaCP { using ports : comando : comandoAcessoIPT ; } totem : TotemAutoAtendimentoCP { using ports : status : statusOperacaoIPT ; credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; } maquina : MaquinaItensCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; solicitacaoVenda : requisicaoVendaOPT ; } torneira : TorneiraAutomaticaCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; solicitacaoVolume : fluxoVolumeOPT ; }  coleta : PontoColetaCP { using ports : liberacao : liberaEntregaIPT ; status : statusOperacaoIPT ; solicitacaoColeta : validacaoColetaOPT ; }   transacao : ValidadorTransacaoCP { using ports : financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; autorizacaoVenda : autorizaVendaIPT ; saldoValidado : gestaoSaldoOPT ; }    ctrlColeta : ControladorColetaCP { using ports : validacaoColeta : validacaoColetaOPT ; autorizacao : liberaEntregaIPT ; status : statusOperacaoIPT ; } repo : RepositorioTransacoesCP { using ports : financeiro : processaFinanceiroIPT ; pedido : registroPedidoOPT ; venda : requisicaoVendaOPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; }  ControladorAcessoCP : ControladorAcessoCP { using ports : validacao : validaAcessoIPT ; autorizacaoAcesso : autorizaAcessoOPT ; } quiosque : QuiosquePedidoCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; pedido : registroPedidoOPT ; }  pedidos : GerenciadorPedidosCP { using ports : autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; pedidoRecebido : registroPedidoIPT ; financeiroSaida : processaFinanceiroOPT ; } creditos : GerenciadorCreditoCP { using ports : credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; financeiro : processaFinanceiroIPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; liquidacaoRecebida : solicitaLiquidacaoIPT ; } vendas : ControladorVendaCP { using ports : pedidoVenda : requisicaoVendaOPT ; autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; financeiroSaida : processaFinanceiroOPT ; } ControladorVolumeCP : ControladorVolumeCP { using ports : volumeSolicitado : fluxoVolumeOPT ; autorizacao : autorizaVendaIPT ; status : statusOperacaoIPT ; financeiroSaida : processaFinanceiroOPT ; } connectors :  c1 : identificacaoCN bindings leituraRFID = validacao ; c2 : controleAcessoCN bindings autorizacaoAcesso = comando ;    c6 : identificacaoCN bindings solicitacaoColeta = validacaoColeta ; } }
 
     component def ControladorAcessoCP {
     ports :  validacao : validaAcessoIPT ; autorizacaoAcesso : autorizaAcessoOPT ; }
 
     component def GerenciadorCreditoCP {
-    ports : credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; financeiro : processaFinanceiroIPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; }
+    ports : credito : enviaCreditoOPT ; liquidacao : solicitaLiquidacaoOPT ; financeiro : processaFinanceiroIPT ; saldo : gestaoSaldoOPT ; status : statusOperacaoIPT ; liquidacaoRecebida : solicitaLiquidacaoIPT ; }
 
     component def ValidadorTransacaoCP {
     ports : financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; autorizacaoVenda : autorizaVendaIPT ; saldoValidado : gestaoSaldoOPT ; }
 
     component def ControladorVendaCP {
-    ports : pedidoVenda : requisicaoVendaOPT ; autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; }
+    ports : pedidoVenda : requisicaoVendaOPT ; autorizacao : autorizaVendaIPT ;  status : statusOperacaoIPT ; financeiroSaida : processaFinanceiroOPT ; }
 
     component def ControladorVolumeCP {
-    ports : volumeSolicitado : fluxoVolumeOPT ; autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; }
+    ports : volumeSolicitado : fluxoVolumeOPT ; autorizacao : autorizaVendaIPT ;  status : statusOperacaoIPT ; financeiroSaida : processaFinanceiroOPT ; }
 
     component def GerenciadorPedidosCP {
-    ports :  autorizacao : autorizaVendaIPT ; financeiro : processaFinanceiroIPT ; status : statusOperacaoIPT ; pedidoRecebido : registroPedidoOPT ; }
+    ports :  autorizacao : autorizaVendaIPT ;  status : statusOperacaoIPT ;  pedidoRecebido : registroPedidoIPT ; financeiroSaida : processaFinanceiroOPT ; }
 
     component def ControladorColetaCP {
     ports : validacaoColeta : validacaoColetaOPT ; autorizacao : liberaEntregaIPT ; status : statusOperacaoIPT ; }
